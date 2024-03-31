@@ -1,0 +1,7 @@
+apiVersion: gateway.mulesoft.com/v1alpha1
+kind: Service
+metadata:
+  name: pingservice
+  namespace: gateway
+spec:
+  address: https://login-itg.external.hp.com/

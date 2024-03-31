@@ -1,0 +1,11 @@
+#%Policy Definition 0.1
+name: custom_token_validation
+description: validate tokens using outbound service call mule-flex-api
+category: Security
+providedCharacteristics:
+  - Requires authentication
+requiredCharacteristics: []
+interfaceScope: ["api", "resource"]
+interfaceTransformation: []
+encryptionSupported: true
+violationCategory: authentication

@@ -1,0 +1,29 @@
+[package]
+name = "custom_token_validation"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+crate-type = ["cdylib"]
+name="custom_token_validation"
+path="src/lib.rs"
+
+[dependencies]
+bytes = "1.5.0"
+getrandom = "0.2.11"
+http = "1.0.0"
+jwt-simple = "0.12.1"
+log = "0.4.20"
+proxy-wasm = { git = "https://github.com/proxy-wasm/proxy-wasm-rust-sdk.git", tag = "v0.2.0" }
+reqwest-wasm = "0.11.16"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+wasi-experimental-http = "0.10.0"
+wasm-bindgen = "0.2"
+wasmi = "0.7"
+
+[profile.release]
+opt-level = "z"
+lto = "fat"

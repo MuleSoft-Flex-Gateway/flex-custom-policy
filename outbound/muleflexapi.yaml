@@ -1,0 +1,7 @@
+apiVersion: gateway.mulesoft.com/v1alpha1
+kind: Service
+metadata:
+  name: muleflexapi
+  namespace: gateway
+spec:
+  address: http://mule-flex-api.mulesoft-rtf-dev-app.svc/
